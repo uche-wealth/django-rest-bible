@@ -1,0 +1,10 @@
+#.gitignore
+.venv/
+.mypy_cache/
+__pycache__/
+build/
+dist/
+*.json
+*.sqlite3
+*.env
+

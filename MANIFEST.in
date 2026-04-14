@@ -1,0 +1,2 @@
+recursive-include bible/static *
+recursive-include bible/templates *

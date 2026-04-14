@@ -1,0 +1,140 @@
+{% block content %}
+<center><h1>The Holy Bible</h1></center>
+<ol>
+{% for book in books %}
+{% if book.number == 1 %}
+<li><a href="{% url 'genesis' %}">{{ book }}</a></li>
+{% elif book.number == 2 %}
+<li><a href="{% url 'exodus' %}">{{ book }}</a></li>
+{% elif book.number == 3 %}
+<li><a href="{% url 'leviticus' %}">{{ book }}</a></li>
+{% elif book.number == 4 %}
+<li><a href="{% url 'numbers' %}">{{ book }}</a></li>
+{% elif book.number == 5 %}
+<li><a href="{% url 'deuteronomy' %}">{{ book }}</a></li>
+{% elif book.number == 6 %}
+<li><a href="{% url 'joshua' %}">{{ book }}</a></li>
+{% elif book.number == 7 %}
+<li><a href="{% url 'judges' %}">{{ book }}</a></li>
+{% elif book.number == 8 %}
+<li><a href="{% url 'ruth' %}">{{ book }}</a></li>
+{% elif book.number == 9 %}
+<li><a href="{% url 'first_samuel' %}">{{ book }}</a></li>
+{% elif book.number == 10 %}
+<li><a href="{% url 'second_samuel' %}">{{ book }}</a></li>
+{% elif book.number == 11 %}
+<li><a href="{% url 'first_kings' %}">{{ book }}</a></li>
+{% elif book.number == 12 %}
+<li><a href="{% url 'second_kings' %}">{{ book }}</a></li>
+{% elif book.number == 13 %}
+<li><a href="{% url 'first_chronicles' %}">{{ book }}</a></li>
+{% elif book.number == 14 %}
+<li><a href="{% url 'second_chronicles' %}">{{ book }}</a></li>
+{% elif book.number == 15 %}
+<li><a href="{% url 'ezra' %}">{{ book }}</a></li>
+{% elif book.number == 16 %}
+<li><a href="{% url 'nehemiah' %}">{{ book }}</a></li>
+{% elif book.number == 17 %}
+<li><a href="{% url 'esther' %}">{{ book }}</a></li>
+{% elif book.number == 18 %}
+<li><a href="{% url 'job' %}">{{ book }}</a></li>
+{% elif book.number == 19 %}
+<li><a href="{% url 'psalms' %}">{{ book }}</a></li>
+{% elif book.number == 20 %}
+<li><a href="{% url 'proverbs' %}">{{ book }}</a></li>
+{% elif book.number == 21 %}
+<li><a href="{% url 'ecclesiastes' %}">{{ book }}</a></li>
+{% elif book.number == 22 %}
+<li><a href="{% url 'song_of_solomon' %}">{{ book }}</a></li>
+{% elif book.number == 23 %}
+<li><a href="{% url 'isaiah' %}">{{ book }}</a></li>
+{% elif book.number == 24 %}
+<li><a href="{% url 'jeremiah' %}">{{ book }}</a></li>
+{% elif book.number == 25 %}
+<li><a href="{% url 'lamentations' %}">{{ book }}</a></li>
+{% elif book.number == 26 %}
+<li><a href="{% url 'ezekiel' %}">{{ book }}</a></li>
+{% elif book.number == 27 %}
+<li><a href="{% url 'daniel' %}">{{ book }}</a></li>
+{% elif book.number == 28 %}
+<li><a href="{% url 'hosea' %}">{{ book }}</a></li>
+{% elif book.number == 29 %}
+<li><a href="{% url 'joel' %}">{{ book }}</a></li>
+{% elif book.number == 30 %}
+<li><a href="{% url 'amos' %}">{{ book }}</a></li>
+{% elif book.number == 31 %}
+<li><a href="{% url 'obadiah' %}">{{ book }}</a></li>
+{% elif book.number == 32 %}
+<li><a href="{% url 'jonah' %}">{{ book }}</a></li>
+{% elif book.number == 33 %}
+<li><a href="{% url 'micah' %}">{{ book }}</a></li>
+{% elif book.number == 34 %}
+<li><a href="{% url 'nahum' %}">{{ book }}</a></li>
+{% elif book.number == 35 %}
+<li><a href="{% url 'habakkuk' %}">{{ book }}</a></li>
+{% elif book.number == 36 %}
+<li><a href="{% url 'zephaniah' %}">{{ book }}</a></li>
+{% elif book.number == 37 %}
+<li><a href="{% url 'haggai' %}">{{ book }}</a></li>
+{% elif book.number == 38 %}
+<li><a href="{% url 'zechariah' %}">{{ book }}</a></li>
+{% elif book.number == 39 %}
+<li><a href="{% url 'malachi' %}">{{ book }}</a></li>
+{% elif book.number == 40 %}
+<li><a href="{% url 'matthew' %}">{{ book }}</a></li>
+{% elif book.number == 41 %}
+<li><a href="{% url 'mark' %}">{{ book }}</a></li>
+{% elif book.number == 42 %}
+<li><a href="{% url 'luke' %}">{{ book }}</a></li>
+{% elif book.number == 43 %}
+<li><a href="{% url 'john' %}">{{ book }}</a></li>
+{% elif book.number == 44 %}
+<li><a href="{% url 'acts' %}">{{ book }}</a></li>
+{% elif book.number == 45 %}
+<li><a href="{% url 'romans' %}">{{ book }}</a></li>
+{% elif book.number == 46 %}
+<li><a href="{% url 'first_corinthians' %}">{{ book }}</a></li>
+{% elif book.number == 47 %}
+<li><a href="{% url 'second_corinthians' %}">{{ book }}</a></li>
+{% elif book.number == 48 %}
+<li><a href="{% url 'galatians' %}">{{ book }}</a></li>
+{% elif book.number == 49 %}
+<li><a href="{% url 'ephesians' %}">{{ book }}</a></li>
+{% elif book.number == 50 %}
+<li><a href="{% url 'philippians' %}">{{ book }}</a></li>
+{% elif book.number == 51 %}
+<li><a href="{% url 'colossians' %}">{{ book }}</a></li>
+{% elif book.number == 52 %}
+<li><a href="{% url 'first_thessalonians' %}">{{ book }}</a></li>
+{% elif book.number == 53 %}
+<li><a href="{% url 'second_thessalonians' %}">{{ book }}</a></li>
+{% elif book.number == 54 %}
+<li><a href="{% url 'first_timothy' %}">{{ book }}</a></li>
+{% elif book.number == 55 %}
+<li><a href="{% url 'second_timothy' %}">{{ book }}</a></li>
+{% elif book.number == 56 %}
+<li><a href="{% url 'titus' %}">{{ book }}</a></li>
+{% elif book.number == 57 %}
+<li><a href="{% url 'philemon' %}">{{ book }}</a></li>
+{% elif book.number == 58 %}
+<li><a href="{% url 'hebrews' %}">{{ book }}</a></li>
+{% elif book.number == 59 %}
+<li><a href="{% url 'james' %}">{{ book }}</a></li>
+{% elif book.number == 60 %}
+<li><a href="{% url 'first_peter' %}">{{ book }}</a></li>
+{% elif book.number == 61 %}
+<li><a href="{% url 'second_peter' %}">{{ book }}</a></li>
+{% elif book.number == 62 %}
+<li><a href="{% url 'first_john' %}">{{ book }}</a></li>
+{% elif book.number == 63 %}
+<li><a href="{% url 'second_john' %}">{{ book }}</a></li>
+{% elif book.number == 64 %}
+<li><a href="{% url 'third_john' %}">{{ book }}</a></li>
+{% elif book.number == 65 %}
+<li><a href="{% url 'jude' %}">{{ book }}</a></li>
+{% elif book.number == 66 %}
+<li><a href="{% url 'revelation' %}">{{ book }}</a></li>
+{% endif %}
+{% endfor %}
+</ol>
+{% endblock content %}
