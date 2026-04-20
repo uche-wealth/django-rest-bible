@@ -14,12 +14,18 @@ pip install django-rest-bible
 ```
 
 ## Quick start
-1. Add bible and bible_api to your INSTALLED_APPS setting:
+1. This package depends on `rest_framework` and `django_filters` packages. 
+Add them and also `bible` and `bible_api` to your INSTALLED_APPS setting:
+```
  INSTALLED_APPS = [
         ...,
+        "rest_framework",
+        "django_filters",
+
         "bible",
         "bible_api",
     ]
+```
 2. Include the bible and bible_api URLconf in your project urls.py:
 ```
 path('', include('bible.urls')),
@@ -32,15 +38,17 @@ data.
 
 #### Bible Data
 
-A JSON dump of the entire KJV Bible is available for download here http://s3.amazonaws.com/bible-data/kjv_bible.json
+A JSON dump of the entire KJV Bible is available for download [here](http://s3.amazonaws.com/bible-data/kjv_bible.json).
 
 You can load the downloaded Bible data into your project's database by running
 the django loaddata command:
 ```
 python manage.py loaddata kjv_bible.json --app bible
 ```
-5. Start the development server and visit http://127.0.0.1:8000/ for the Index 
-of books or the endpoint http://127.0.0.1:8000/api/v1/bible. You can filter for 
+5. Start the development server `python manage.py runserver` 
+and visit http://127.0.0.1:8000/ for the Index 
+of books. Click each book of the Bible to see its content.
+A dedicated API endpoint http://127.0.0.1:8000/api/v1/bible . You can filter for 
 a specific book, chapter or verse using the query parameters chapter__book_slug, 
 chapter__number and number for example: http://127.0.0.1:8000/api/v1/bible/?chapter__book__slug=genesis&chapter__number=2&number=3 should return a serialized Genesis 2:3.
 

@@ -74,7 +74,6 @@ urlpatterns = [
     path('bible/jude/', views.jude, name='jude'),
     path('bible/revelation/', views.revelation, name='revelation'),
 
-    path('bible/genesis/1/', views.gen1, name='genesis1'),
     path('bible?<int:number>/', views.books, name='books'),
   
 ]

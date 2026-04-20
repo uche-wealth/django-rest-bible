@@ -40,3 +40,6 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/uche-wealth/django-rest-bible"
+
+[tool.setuptools]
+packages = ["bible", "bible_api"]

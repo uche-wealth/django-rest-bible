@@ -420,7 +420,3 @@ def revelation(request):
     context = {'book': book}
     return render(request, "bible/book.html", context)
 
-
-def gen1(request):
-    book = Verse.objects.filter(chapter__book__number=1, chapter__number=1)
-    return render(request, 'bible/book.html', {'book': book})
