@@ -73,7 +73,5 @@ urlpatterns = [
     path('bible/third_john/', views.third_john, name='third_john'),
     path('bible/jude/', views.jude, name='jude'),
     path('bible/revelation/', views.revelation, name='revelation'),
-
-    path('bible?<int:number>/', views.books, name='books'),
   
 ]

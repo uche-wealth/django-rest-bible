@@ -1,8 +1,32 @@
+{% extends 'bible/base.html' %}
+
+{% block title %}{{ book_name }}{% endblock title %}
 {% block content %}
-
+<div class="container">
+<div class="card mx-auto" style="width: 75%;">
+<ul class="list-group list-group-flush">
+<div class="card-header"><h3>{{ book_name }}</h3></div>
 {% for b in book %}
-<br>
-<p>{{ b }} - {{ b.text }}</p>
+{% if forloop.counter == one_quarter %}
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%">25%</div>
+</div>
+{% elif forloop.counter == one_half %}
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 50%">50%</div>
+</div>
+{% elif forloop.counter == three_quarters %}
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 75%">75%</div>
+</div>
+{% endif %}
+<li class="list-group-item">{{ b }}&nbsp{{ b.text }}</li>
 {% endfor %}
-
+</ul>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 100%">100%</div><br>
+</div>
+</div>
+<div class="text-center mt-3"><a href="{% url 'index' %}">&laquo Home</a></div> 
+</div>
 {% endblock content %}

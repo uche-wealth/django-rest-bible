@@ -14,14 +14,15 @@ pip install django-rest-bible
 ```
 
 ## Quick start
-1. This package depends on `rest_framework` and `django_filters` packages. 
+1. This package depends on `rest_framework`, `django_filters` and
+`drf-spectacular` packages. 
 Add them and also `bible` and `bible_api` to your INSTALLED_APPS setting:
 ```
  INSTALLED_APPS = [
         ...,
         "rest_framework",
         "django_filters",
-
+        "drf-spectacular",
         "bible",
         "bible_api",
     ]
@@ -47,10 +48,47 @@ python manage.py loaddata kjv_bible.json --app bible
 ```
 5. Start the development server `python manage.py runserver` 
 and visit http://127.0.0.1:8000/ for the Index 
-of books. Click each book of the Bible to see its content.
-A dedicated API endpoint http://127.0.0.1:8000/api/v1/bible . You can filter for 
+of books. Click each book of the Bible to see its content. 
+
+6. To read the whole bible GET /bible/, for old testament only GET /bible/ot/
+and GET /bible/nt/ for new testament.
+
+7. A dedicated endpoint 
+is available at GET /api/v1/bible. You can filter for 
 a specific book, chapter or verse using the query parameters chapter__book_slug, 
 chapter__number and number for example: http://127.0.0.1:8000/api/v1/bible/?chapter__book__slug=genesis&chapter__number=2&number=3 should return a serialized Genesis 2:3.
+
+8. For Swagger UI, use `drf-spectacular`. To configure this,
+make sure `drf-spectacular` is added to installed apps in `settings.py`. Then
+register the spectacular AutoSchema with DRF:
+```
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+```
+and specify some metadata:
+```
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Your Project API',
+    'DESCRIPTION': 'Your project description',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}
+```
+Finally register the endpoints in your project urls.py
+```
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+
+urlpatterns = [
+    # YOUR PATTERNS
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+]
+```
+Now go to GET /api/schema/swagger-ui/ to access the Swagger UI.
 
 ## Why This Project Exists
 
@@ -108,7 +146,7 @@ repository.
 
 ## Contact
 
-Find my [email here](https://mailhide.io/e/sXPUdBJS)
+To contact the author, please fill out this [form](https://lwu.pythonanywhere.com/contact/)
 
 
 
