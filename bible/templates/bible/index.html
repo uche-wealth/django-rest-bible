@@ -1,140 +1,146 @@
+{% extends 'bible/base.html' %}
+{% block title %}{{ book_name }}{% endblock title %}
 {% block content %}
-<center><h1>The Holy Bible</h1></center>
-<ol>
+<div class="container">
+<div class="card mx-auto text-center" style="width: 36rem;">
+  <div class="card-header"><h3>The Holy Bible</h3></div>
+  <ul class="list-group list-group-flush">
 {% for book in books %}
 {% if book.number == 1 %}
-<li><a href="{% url 'genesis' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'genesis' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 2 %}
-<li><a href="{% url 'exodus' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'exodus' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 3 %}
-<li><a href="{% url 'leviticus' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'leviticus' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 4 %}
-<li><a href="{% url 'numbers' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'numbers' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 5 %}
-<li><a href="{% url 'deuteronomy' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'deuteronomy' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 6 %}
-<li><a href="{% url 'joshua' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'joshua' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 7 %}
-<li><a href="{% url 'judges' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'judges' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 8 %}
-<li><a href="{% url 'ruth' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'ruth' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 9 %}
-<li><a href="{% url 'first_samuel' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_samuel' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 10 %}
-<li><a href="{% url 'second_samuel' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_samuel' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 11 %}
-<li><a href="{% url 'first_kings' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_kings' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 12 %}
-<li><a href="{% url 'second_kings' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_kings' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 13 %}
-<li><a href="{% url 'first_chronicles' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_chronicles' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 14 %}
-<li><a href="{% url 'second_chronicles' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_chronicles' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 15 %}
-<li><a href="{% url 'ezra' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'ezra' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 16 %}
-<li><a href="{% url 'nehemiah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'nehemiah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 17 %}
-<li><a href="{% url 'esther' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'esther' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 18 %}
-<li><a href="{% url 'job' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'job' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 19 %}
-<li><a href="{% url 'psalms' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'psalms' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 20 %}
-<li><a href="{% url 'proverbs' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'proverbs' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 21 %}
-<li><a href="{% url 'ecclesiastes' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'ecclesiastes' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 22 %}
-<li><a href="{% url 'song_of_solomon' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'song_of_solomon' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 23 %}
-<li><a href="{% url 'isaiah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'isaiah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 24 %}
-<li><a href="{% url 'jeremiah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'jeremiah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 25 %}
-<li><a href="{% url 'lamentations' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'lamentations' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 26 %}
-<li><a href="{% url 'ezekiel' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'ezekiel' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 27 %}
-<li><a href="{% url 'daniel' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'daniel' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 28 %}
-<li><a href="{% url 'hosea' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'hosea' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 29 %}
-<li><a href="{% url 'joel' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'joel' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 30 %}
-<li><a href="{% url 'amos' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'amos' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 31 %}
-<li><a href="{% url 'obadiah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'obadiah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 32 %}
-<li><a href="{% url 'jonah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'jonah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 33 %}
-<li><a href="{% url 'micah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'micah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 34 %}
-<li><a href="{% url 'nahum' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'nahum' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 35 %}
-<li><a href="{% url 'habakkuk' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'habakkuk' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 36 %}
-<li><a href="{% url 'zephaniah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'zephaniah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 37 %}
-<li><a href="{% url 'haggai' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'haggai' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 38 %}
-<li><a href="{% url 'zechariah' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'zechariah' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 39 %}
-<li><a href="{% url 'malachi' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'malachi' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 40 %}
-<li><a href="{% url 'matthew' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'matthew' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 41 %}
-<li><a href="{% url 'mark' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'mark' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 42 %}
-<li><a href="{% url 'luke' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'luke' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 43 %}
-<li><a href="{% url 'john' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'john' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 44 %}
-<li><a href="{% url 'acts' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'acts' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 45 %}
-<li><a href="{% url 'romans' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'romans' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 46 %}
-<li><a href="{% url 'first_corinthians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_corinthians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 47 %}
-<li><a href="{% url 'second_corinthians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_corinthians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 48 %}
-<li><a href="{% url 'galatians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'galatians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 49 %}
-<li><a href="{% url 'ephesians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'ephesians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 50 %}
-<li><a href="{% url 'philippians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'philippians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 51 %}
-<li><a href="{% url 'colossians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'colossians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 52 %}
-<li><a href="{% url 'first_thessalonians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_thessalonians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 53 %}
-<li><a href="{% url 'second_thessalonians' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_thessalonians' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 54 %}
-<li><a href="{% url 'first_timothy' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_timothy' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 55 %}
-<li><a href="{% url 'second_timothy' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_timothy' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 56 %}
-<li><a href="{% url 'titus' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'titus' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 57 %}
-<li><a href="{% url 'philemon' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'philemon' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 58 %}
-<li><a href="{% url 'hebrews' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'hebrews' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 59 %}
-<li><a href="{% url 'james' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'james' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 60 %}
-<li><a href="{% url 'first_peter' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_peter' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 61 %}
-<li><a href="{% url 'second_peter' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_peter' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 62 %}
-<li><a href="{% url 'first_john' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'first_john' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 63 %}
-<li><a href="{% url 'second_john' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'second_john' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 64 %}
-<li><a href="{% url 'third_john' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'third_john' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 65 %}
-<li><a href="{% url 'jude' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'jude' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
 {% elif book.number == 66 %}
-<li><a href="{% url 'revelation' %}">{{ book }}</a></li>
+<li class="list-group-item"><a href="{% url 'revelation' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{ book }}</a></li>
+</ul>
 {% endif %}
 {% endfor %}
-</ol>
+</div>
+</div>
 {% endblock content %}

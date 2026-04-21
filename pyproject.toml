@@ -4,11 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-rest-bible"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
     "django>=5.0",
     "django-filter>=25.0",
-    "djangorestframework>=3.15.0"
+    "djangorestframework>=3.15.0",
+    "drf-spectacular>=0.29.0"
 ]
 description = "A Django app for interfacing with the Holy Bible."
 readme = "README.md"
@@ -40,6 +41,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/uche-wealth/django-rest-bible"
+Issues = "https://github.com/uche-wealth/django-rest-bible/issues"
 
 [tool.setuptools]
 packages = ["bible", "bible_api"]
